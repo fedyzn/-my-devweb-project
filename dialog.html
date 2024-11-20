@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Exemple Balise Dialog</title>
+   <style>
+       /* Style optionnel pour la boîte de dialogue */
+       dialog {
+           border: 1px solid #ddd;
+           border-radius: 5px;
+           padding: 10px;
+       }
+   </style>
+</head><body>
+   <button id="afficherDialogBtn">Afficher la Boîte de Dialogue</button>   <!-- Balise dialog -->
+   <dialog id="maBoiteDeDialogue">
+       <h2>Boîte de Dialogue</h2>
+       <p>Ceci est le contenu de la boîte de dialogue.</p>
+       <button id="fermerDialogBtn">Fermer</button>
+   </dialog>   <script>
+       // Récupérer la référence vers la boîte de dialogue
+       const maBoiteDeDialogue = document.getElementById('maBoiteDeDialogue');       // Récupérer la référence vers le bouton pour afficher la boîte de dialogue
+       const afficherDialogBtn = document.getElementById('afficherDialogBtn');       // Récupérer la référence vers le bouton pour fermer la boîte de dialogue
+       const fermerDialogBtn = document.getElementById('fermerDialogBtn');       // Ajouter un gestionnaire d'événement pour afficher la boîte de dialogue
+       afficherDialogBtn.addEventListener('click', () => {
+           maBoiteDeDialogue.showModal();
+       });       // Ajouter un gestionnaire d'événement pour fermer la boîte de dialogue
+       fermerDialogBtn.addEventListener('click', () => {
+           maBoiteDeDialogue.close();
+       });
+   </script>
+</body></html>
+
+
+Envoyer un message intro-dev-web
