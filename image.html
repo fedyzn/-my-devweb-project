@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image</title>
+</head>
+<body>
+   
+     <input type="file" id="imageUpload" name="imageUpload" accept="image/*" onchange="afficherApercuImage()">
+<img id="apercuImage" src="#" alt="Aperçu de l'image" style="display: none; max-width: 100px; max-height: 100px;">
+<br>
+<br>
+<input type="week" id="semaineplage" name="semaineplage" min="2024-w01" max="2024-w56">
+<script>
+   function afficherApercuImage() {
+       var input = document.getElementById('imageUpload');
+       var apercu = document.getElementById('apercuImage');
+       var fichier = input.files[0];
+       var lecteur = new FileReader();       lecteur.onload = function (e) {
+           apercu.src = e.target.result;
+           apercu.style.display = 'block';
+       };       lecteur.readAsDataURL(fichier);
+   }
+</script>
+<input type="color" id="couleur" name="couleur" list="couleurs">
+<datalist id="couleurs">
+    <option style="background-color: blueviolet"></option>;
+    <option style="background-color: #00ff00"></option>;
+    <option style="background-color: #ff0000"></option>;
+</datalist>
+<input type="text" id="commentaireCompteur" name="commentaireCompteur" maxlength="100" oninput="compterCaracteres()">
+<span id="compteurCaracteres">0/100</span>
+<script>
+   function compterCaracteres() {
+       var champ = document.getElementById('commentaireCompteur');
+       var compteur = document.getElementById('compteurCaracteres');
+       compteur.textContent = champ.value.length + '/' + champ.maxLength;
+   }
+</script>
+</body>
+
+
