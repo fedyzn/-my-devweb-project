@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice : Différence de display</title>
+    <style>
+        /* Styles pour les tests */
+        .block {
+            display: block;
+            background-color: lightblue;
+            margin: 5px 0;
+        }
+
+        .inline {
+            display: inline;
+            background-color: lightcoral;
+            margin: 5px;
+        }
+
+        .inline-block {
+            display: inline-block;
+            background-color: lightgreen;
+            margin: 5px;
+            width: 100px;
+            height: 50px;
+        }
+
+        .none {
+            display: none;
+            background-color: gray;
+        }
+
+        .container {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Exercice : Différences entre les propriétés de display</h1>
+    <div class="container">
+        <h2>Block</h2>
+        <div class="block">Je suis un élément block.</div>
+        <div class="block">Je suis un autre élément block.</div>
+        <h2>Inline</h2>
+        <span class="inline">Je suis un élément inline.</span>
+        <span class="inline">Moi aussi, je suis inline.</span>
+        <h2>Inline-Block</h2>
+        <div class="inline-block">Inline-Block</div>
+        <div class="inline-block">Avec dimensions</div>
+        <h2>None</h2>
+        <div class="none">Je suis masqué (display: none).</div> <button class="button"
+            onclick="toggleNone()">Afficher/Masquer l'élément None</button>
+    </div>
+    <script>
+        function toggleNone() {
+            const noneElement = document.querySelector('.none');
+            if (noneElement.style.display === 'none') {
+                noneElement.style.display = 'block';
+            } else {
+                noneElement.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+
+</html>

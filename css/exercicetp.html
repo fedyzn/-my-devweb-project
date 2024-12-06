@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background-color: #41A9F4
+;
+            position: sticky;
+            top: 0px;        }        .navbar a:hover {
+            background-color: #0794F2
+
+        }        .navbar a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px;
+        }        main {
+            position: relative;
+            /* Nécessaire pour positionner le pseudo-élément */
+            padding: 20px;
+            background-color: transparent;
+            /* Pas de fond direct */
+        }        main::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #E8F5FF
+;
+            background-image: url("./mission2.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.3;
+            /* Ajustez la valeur d'opacité ici */
+            z-index: -1;
+            /* Position derrière le contenu principal */
+        }
+        h2{
+            background-color: bisque;
+            border: 1px dotted;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+        #articles{
+            background-color: #EAF3F9
+;
+            display: flex;
+        }
+        article{
+            border: 1px solid rgb(32, 28, 28);
+            margin: 2%;
+            padding: 2%;
+           box-shadow:  12px 12px 2px 1px rgba(0, 0, 255, .2);
+          cursor: pointer;
+        }
+        h3{
+            color:brown;
+            text-align: center;
+            border-bottom:1px solid ;
+
+            margin-bottom: 5px;
+
+        }
+        article p{
+            text-align: justify;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        article {
+           text-align: center;
+        }
+        article {
+           text-align: center;
+        }
+        article img{
+            width:80%;
+            margin-top: 10px;
+        }
+        article:hover{
+            border: 1px solid black;
+           
+           box-shadow: 5px 5px 5px 5px red;
+           
+        }
+    
+        form{
+            background-color: #EAF3F9
+;
+            padding: 10px;
+        }
+        input, textarea{
+            width: 100%;            background-color: rgb(240, 250, 215);        }
+        label{
+            width: 100%;
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+        }
+        input[type="submit"]{
+            width: 50%;
+            height: 40px;
+            background-color: gray;
+            border: 3px solid black;
+            border-radius:10px 5px ;
+            box-shadow:2px 2px 2px 2px  black;
+            cursor: pointer;}
+
+
+            /* Animation */
+ /* Conteneur des slides */
+ #slides {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            /* Hauteur du slider */
+            overflow: hidden;
+            /* Cache le contenu débordant */
+        }        /* Images dans le slider */
+        #slides img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Assure que les images remplissent le conteneur sans déformation */
+            opacity: 0;
+            /* Masqué par défaut */
+            transition: opacity 1s ease;
+            /* Transition en douceur */
+        }        /* Animation des images */
+        @keyframes toggleSlides {            0%,
+            50% {
+                opacity: 1;
+                /* Affiche la première image */
+            }            50.01%,
+            100% {
+                opacity: 0;
+                /* Masque la première image */
+            }
+        }        /* Appliquer l'animation à la première image */
+        #slides img:first-child {
+            animation: toggleSlides 10s infinite;
+            /* Animation de 10 secondes */
+        }        /* Appliquer l'animation à la deuxième image */
+        #slides img:nth-child(2) {
+            animation: toggleSlides 10s infinite;
+            animation-delay: 5s;
+            /* Décalage pour afficher après la première image */
+        }
+        #slides img:nth-child(3) {
+            animation: toggleSlides 10s infinite;
+            animation-delay: 5s;
+            /* Décalage pour afficher après la première image */
+        }
+        #slides img:nth-child(4) {
+            animation: toggleSlides 10s infinite;
+            animation-delay: 5s;
+            /* Décalage pour afficher après la première image */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#">Accueil</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+
+   
+ <main>
+    
+    <section id="accueil">
+<h1>
+    Lorem ipsum dolor sit amet.
+</h1>
+<div id ="slides">
+    <img src="./mission1.jpg "  width="300px" >
+    <img src="./mission2.jpg "  width="300px" >
+    <img src="./fusil_assaut.jpg "  width="300px">
+    <img src="./gilet_pare_balles.jpg "  width="300px">
+</div>
+    </section>
+    <section id="services">
+<h2>
+    Services
+</h2>
+<section id="articles">
+    <article>
+        <h3>Service1</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, illum.</p>
+        <img src="./mission2.jpg" width="">
+    </article>
+    <article>
+        <h3>Service1</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, illum.</p>
+        <img src="./mission2.jpg" width="">
+    </article>
+    <article>
+        <h3>Service1</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, illum.</p>
+        <img src="./mission2.jpg" width="">
+    </article>
+</section>
+
+    <section id="contact">
+        <h2> contact</h2>
+        <form action="post" enctype="application/x-www-form-urlencoded">
+            <label for="nom">Nom:</label>
+            <input type="text" name="nom" id="nom"><br><br>
+           
+           
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email"><br><br>
+            <label for="text">Message:</label><br>
+            <textarea name="text" id="text"></textarea><br><br>
+                    <input type="submit" value="Envoyer">
+        </form>
+    </section>
+</section>
+ </main>  
+</body>
+
+</html> 

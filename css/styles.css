@@ -1,0 +1,27 @@
+h2{
+    color: blue;
+
+}
+
+h2::before{
+    content: "Mission :  " ;
+}
+input:focus{
+    background-color: orange;
+}
+button{
+    background-color: orange;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 200px 100px ;
+
+}
+ul:first-child{
+    font-weight: bold;
+color: rgb(231, 32, 32);
+}
+.important{
+    color: red;
+    border-radius: 15px;
+    
+}

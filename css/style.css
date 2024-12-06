@@ -1,0 +1,28 @@
+p{
+   color: brown;
+    font-size: 18px;
+}
+button{
+    background-color:rgb(59, 22, 224);
+    color: rgb(8, 8, 19);
+    padding: 20px 200px;
+    margin: 50px 200px;
+    border-radius: 10px;
+    border: 0px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(255, 240, 241);
+    color: brown;
+    border-radius: 50px;}
+    
+
+    div{
+        border: 5px solid red;
+        width: 400px;
+        height: 500px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: bold;
+    }
+
+    /*commentaire*/
